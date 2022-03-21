@@ -1,0 +1,20 @@
+<mat-form-field id="search" appearance="outline">
+  <mat-icon matPrefix>search</mat-icon>
+  <input matInput placeholder="Search" type="search">
+</mat-form-field>
+<mat-nav-list>
+  <a mat-list-item routerLink="/store/categories">
+    <mat-icon>widgets</mat-icon> Categories
+  </a>
+  <a mat-list-item routerLink="/store/updates">
+    <mat-icon>system_update_alt</mat-icon> Updates
+  </a>
+</mat-nav-list>
+
+<mat-card id="userInfo" class="mat-elevation-z3">
+  <mat-card-header>
+    <img mat-card-avatar src="{{user.avatar_url}}" alt="User profile picture">
+    <mat-card-title>{{user.name}}</mat-card-title>
+    <mat-card-subtitle>{{user.role | capitalize}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

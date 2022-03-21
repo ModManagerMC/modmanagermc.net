@@ -1,0 +1,21 @@
+
+.previewed-mods {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-around;
+}
+
+
+.previewed-mods mat-card {
+  width: 40%;
+  max-width: 40%;
+  max-height: 30%;
+}
+
+#top-updated img {
+  width: 100%;
+}
+
+#top-downloaded img {
+  width: 100%;
+}

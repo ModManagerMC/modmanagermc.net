@@ -1,0 +1,11 @@
+#login-screen {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-content {
+  margin-bottom: 0;
+}

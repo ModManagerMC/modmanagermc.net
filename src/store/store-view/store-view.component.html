@@ -1,0 +1,12 @@
+<mat-sidenav-container *ngIf="user; else loading" fullscreen>
+  <mat-sidenav fixedInViewport="true" mode="side" opened>
+    <store-side-bar [user]="user"></store-side-bar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #loading>
+  <app-loading>Loading...</app-loading>
+</ng-template>

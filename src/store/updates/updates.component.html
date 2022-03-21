@@ -1,0 +1,16 @@
+<ng-container *ngIf="!loading; else loadingTemplate">
+  <ng-container *ngIf="updates.length != 0; else noUpdates">
+
+  </ng-container>
+</ng-container>
+
+<ng-template #loadingTemplate>
+  <app-loading>Loading updates...</app-loading>
+</ng-template>
+
+<ng-template #noUpdates>
+  <div class="no-updates" fullscreen>
+    <h2>No Updates</h2>
+    <h3>All your mods are up to date.</h3>
+  </div>
+</ng-template>

@@ -1,0 +1,15 @@
+<div class="category-list" *ngIf="!loading; else loadingTemplate">
+  <mat-nav-list *ngFor="let column of columns">
+    <ng-container *ngFor="let category of column; let last = last">
+      <a routerLink="/store/category/{{category.name}}" mat-list-item>
+        <span mat-list-icon [innerHtml]="processSVG(category.icon)"></span>
+        {{ category.name | capitalize}}
+      </a>
+      <mat-divider *ngIf="!last"></mat-divider>
+    </ng-container>
+  </mat-nav-list>
+</div>
+
+<ng-template #loadingTemplate>
+  <app-loading>Loading categories...</app-loading>
+</ng-template>

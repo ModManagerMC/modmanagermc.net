@@ -1,0 +1,11 @@
+#loading-screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-screen mat-progress-bar {
+  width: 70%;
+}
