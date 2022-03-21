@@ -16,7 +16,9 @@ jobs:
 
       - name: Init new repo in dist folder and commit generated files
         run: |
-          cd docs/
+          cp CNAME dist/
+          cd dist/
+          cp index.html 404.html
           git init
           git add -A
           git config --local user.email "action@github.com"
@@ -29,4 +31,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           force: true
-          directory: ./docs/
+          directory: ./dist/

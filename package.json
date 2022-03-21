@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href \"https://modmanagermc.net/\"",
+    "build": "ng build --configuration production --base-href \"https://modmanagermc.net/\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
