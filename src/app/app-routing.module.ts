@@ -14,10 +14,6 @@ const routes: Routes = [
     canActivate: [AuthenticationGuard],
     children: [
       {
-        path: "login",
-        component: LoginComponent,
-      },
-      {
         path: "updates",
         component: UpdatesComponent,
       },
@@ -30,6 +26,10 @@ const routes: Routes = [
         component: CategoryComponent
       }
     ]
+  },
+  {
+    path: "login",
+    component: LoginComponent,
   },
   {
     path: "**",
