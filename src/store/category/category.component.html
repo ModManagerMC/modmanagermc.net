@@ -1,24 +1,14 @@
 <ng-container *ngIf="!loading; else loadingTemplate">
   <mat-toolbar>
-    <button mat-icon-button (click)="goBack()"><mat-icon>arrow_back_ios</mat-icon></button>
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
     <span>{{category | capitalize}}</span>
   </mat-toolbar>
 
   <div class="previewed-mods">
-    <mat-card id="top-updated">
-      <mat-card-header>
-        <mat-card-title>{{previewMods.updated.title}}</mat-card-title>
-        <mat-card-subtitle>{{previewMods.updated.description}}</mat-card-subtitle>
-      </mat-card-header>
-      <img [src]="previewMods.updated.gallery[0]" alt="Header image provided by {{previewMods.updated.title}}">
-    </mat-card>
-    <mat-card id="top-downloaded">
-      <mat-card-header>
-        <mat-card-title>{{previewMods.downloaded.title}}</mat-card-title>
-        <mat-card-subtitle>{{previewMods.downloaded.description}}</mat-card-subtitle>
-      </mat-card-header>
-      <img [src]="previewMods.downloaded.gallery[0]" alt="Header image provided by {{previewMods.downloaded.title}}">
-    </mat-card>
+    <app-mod-showcase [mod]="previewMods.updated" [top]="true" description="Recently updated"></app-mod-showcase>
+    <app-mod-showcase [mod]="previewMods.downloaded" [top]="true" description="Top Downloaded"></app-mod-showcase>
   </div>
   <mat-divider></mat-divider>
 </ng-container>

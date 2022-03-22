@@ -16,6 +16,8 @@ import {CategoriesComponent} from './categories/categories.component';
 import { CategoryComponent } from './category/category.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import { ModShowcaseComponent } from './mod-showcase/mod-showcase.component';
+import {MatRippleModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -24,25 +26,27 @@ import {MatButtonModule} from "@angular/material/button";
     StoreViewComponent,
     UpdatesComponent,
     CategoriesComponent,
-    CategoryComponent
+    CategoryComponent,
+    ModShowcaseComponent
   ],
   exports: [
     StoreViewComponent
   ],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    MatSidenavModule,
-    RouterModule,
-    MatListModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    CommonComponentsModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatButtonModule,
-  ]
+    imports: [
+        CommonModule,
+        HttpClientModule,
+        MatSidenavModule,
+        RouterModule,
+        MatListModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        CommonComponentsModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatRippleModule,
+    ]
 })
 export class StoreModule {
 }

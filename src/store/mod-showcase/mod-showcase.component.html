@@ -1,0 +1,13 @@
+<mat-card matRipple>
+  <div *ngIf="description" class="description">{{description}}</div>
+  <mat-card-header *ngIf="top">
+    <mat-card-title>{{mod.title}}</mat-card-title>
+    <mat-card-subtitle>{{mod.description}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="mod.gallery[0]" alt="">
+  <mat-card-content *ngIf="!top">
+    <mat-card-subtitle><b><ng-content></ng-content></b></mat-card-subtitle>
+    <mat-card-title>{{mod.title}}</mat-card-title>
+    <mat-card-subtitle>{{mod.description}}</mat-card-subtitle>
+  </mat-card-content>
+</mat-card>
